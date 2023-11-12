@@ -1,0 +1,87 @@
+version: "3.5"
+services:
+  nginx_proxy_manager:
+    container_name: nginx_proxy_manager
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    depends_on:
+      - api
+      - web
+      - postgres
+    volumes:
+      - ./.docker/data:/data
+      - ./.docker/letsencrypt:/etc/letsencrypt
+    networks:
+      - mom_network
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=mom
+      - PG_DATA=/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    volumes:
+      - ./.docker/db/:/var/lib/postgresql/data/
+    networks:
+      - mom_network
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    depends_on:
+      - postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - ./.docker/pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - mom_network
+    restart: unless-stopped
+
+  api:
+    container_name: api
+    depends_on:
+      - postgres
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./api/uploads:/usr/src/app/uploads
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+      args:
+        - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/mom?schema=public
+        - SECRET=TEMEK
+        - FALLBACK_LANGUAGE=ru
+    command: sh -c "sleep 10 && npx prisma migrate deploy && npm run start:prod"
+    networks:
+      - mom_network
+
+  web:
+    container_name: web
+    depends_on:
+      - api
+    ports:
+      - "4173:3000"
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    networks:
+      - mom_network
+
+networks:
+  mom_network:
+    name: mom_network

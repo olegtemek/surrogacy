@@ -1,0 +1,23 @@
+FROM node:18.18-alpine
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+
+ARG DATABASE_URL
+ARG SECRET
+ARG FALLBACK_LANGUAGE
+ENV DATABASE_URL=$DATABASE_URL
+ENV SECRET=$SECRET
+ENV FALLBACK_LANGUAGE=$FALLBACK_LANGUAGE
+
+
+RUN npx prisma generate
+
+
+RUN npm run build

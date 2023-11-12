@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "assets": [
+      {
+        "include": "i18n/**/*",
+        "watchAssets": true
+      }
+    ],
+    "webpack": true
+  },
+  "projects": {
+    "prisma": {
+      "type": "library",
+      "root": "libs/prisma",
+      "entryFile": "index",
+      "sourceRoot": "libs/prisma/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/prisma/tsconfig.lib.json"
+      }
+    },
+    "lang": {
+      "type": "library",
+      "root": "libs/lang",
+      "entryFile": "index",
+      "sourceRoot": "libs/lang/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/lang/tsconfig.lib.json"
+      }
+    },
+    "file": {
+      "type": "library",
+      "root": "libs/file",
+      "entryFile": "index",
+      "sourceRoot": "libs/file/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/file/tsconfig.lib.json"
+      }
+    }
+  }
+}

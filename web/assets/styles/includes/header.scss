@@ -1,0 +1,269 @@
+.header {
+  padding: 30px 0;
+
+  @media (max-width:1280px) {
+    padding: 30px 0;
+  }
+
+  @media (max-width:1060px) {
+    padding: 20px 0;
+  }
+
+  @media (max-width:960px) {
+    padding: 10px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    @media (max-width:960px) {
+      flex-wrap: wrap;
+      gap: 20px 0;
+      justify-content: space-between;
+    }
+
+
+    @media (max-width:960px) {
+      &.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        z-index: 9999;
+
+        .header__logo {
+          display: none;
+        }
+
+        .header__button {
+          display: none;
+        }
+
+        .header__nav {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-right: 0;
+
+          p {
+            display: block;
+            margin-bottom: 20px;
+          }
+
+          a {
+            margin-bottom: 24px;
+            margin-right: 0;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .header__lang {
+          position: absolute;
+          top: 50px;
+          left: 40px;
+          display: block;
+        }
+
+        .header__burger {
+          position: absolute;
+          top: 40px;
+          right: 40px;
+
+          svg {
+            &:first-child {
+              display: none;
+            }
+
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+
+
+
+      }
+    }
+  }
+
+
+  &__logo {
+    width: 308px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 92px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width:1280px) {
+      width: 240px;
+      margin-right: 20px;
+    }
+
+    @media (max-width:1060px) {
+      width: 200px;
+    }
+
+    @media (max-width:960px) {
+      width: 100%;
+    }
+
+  }
+
+  &__lang {
+    margin-right: 20px;
+    position: relative;
+
+    @media (max-width:960px) {
+      display: none;
+    }
+
+    span {
+      display: none;
+      cursor: pointer;
+
+      &.active-lang {
+        display: block;
+      }
+    }
+
+    &-switcher {
+      display: flex;
+      position: absolute;
+      top: 120%;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: $white;
+      opacity: 0;
+      transition: $tr;
+      overflow: hidden;
+      height: 0;
+      width: 120%;
+      left: -10%;
+      z-index: -1;
+      border-radius: 0 0 10px 10px;
+
+      a {
+        &:first-child {
+          margin-top: 20px;
+        }
+
+        &.active {
+          cursor: default;
+          pointer-events: none;
+          color: $purple;
+        }
+
+        margin: 10px 0;
+        width: 100%;
+        padding-left: 10%;
+        text-align: left;
+        transition: $tr;
+
+        &:hover {
+          color: $purple;
+        }
+      }
+
+      &.active {
+        z-index: 999;
+        opacity: 1;
+        overflow: visible;
+        height: 70px;
+
+        @media (max-width:1060px) {
+          height: 90px;
+        }
+      }
+    }
+
+  }
+
+  &__nav {
+    margin-right: 92px;
+
+    p {
+      display: none;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 40px;
+    }
+
+
+    @media (max-width:1280px) {
+      margin-right: 40px;
+    }
+
+    @media (max-width:960px) {
+      display: none;
+    }
+
+    a {
+      margin-right: 24px;
+      color: $black;
+      font-weight: 500;
+      line-height: 24px;
+      font-size: 16px;
+
+      @media (max-width:960px) {
+        margin-right: 10px;
+
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__button {
+    color: $purple;
+    border-radius: 56px;
+    border: 2px solid $purple;
+    padding: 14px 40px;
+    cursor: pointer;
+    transition: $tr;
+
+    @media (max-width:1060px) {
+      padding: 10px 20px;
+    }
+
+    &:hover {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+
+  &__burger {
+    display: none;
+    cursor: pointer !important;
+
+    @media (max-width:960px) {
+      display: block;
+    }
+
+    svg {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+}
