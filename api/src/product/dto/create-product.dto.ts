@@ -44,7 +44,15 @@ export class CreateProductDto {
 
   @IsString()
   @IsNotEmpty()
+  has_twins_en: string;
+
+  @IsString()
+  @IsNotEmpty()
   menstrual_cycle: string;
+
+  @IsString()
+  @IsNotEmpty()
+  menstrual_cycle_en: string;
 
   @IsString()
   @IsNotEmpty()

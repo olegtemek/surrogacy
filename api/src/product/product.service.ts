@@ -160,6 +160,8 @@ export class ProductService {
       height: updateProductDto.height,
       has_twins: updateProductDto.has_twins,
       menstrual_cycle: updateProductDto.menstrual_cycle,
+      has_twins_en: updateProductDto.has_twins_en,
+      menstrual_cycle_en: updateProductDto.menstrual_cycle_en,
       name: updateProductDto.name,
       name_en: updateProductDto.name_en,
       nationality: updateProductDto.nationality,
@@ -194,6 +196,7 @@ export class ProductService {
       additional_info_en: updateProductDto.additional_info_en,
       genetic_history: updateProductDto.genetic_history,
       genetic_history_en: updateProductDto.genetic_history_en,
+      city_en: updateProductDto.city_en,
     });
 
     return {
