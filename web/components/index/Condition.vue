@@ -1,19 +1,19 @@
 <template>
   <div class="condition" id="conditions">
     <div class="condition__top">
-      <h2 class="title">{{ $t(`Условия чтобы стать донором`) }}</h2>
+      <h2 class="title">{{ status ? $t(`Условия чтобы стать реципиентом`) : $t(`Условия чтобы стать донором`) }}</h2>
       <p class="text">{{ $t(`condition1`) }}</p>
     </div>
     <div class="container">
       <div class="condition__wrapper">
         <div class="condition__item">
           <h3>{{ $t(`Возраст`) }}</h3>
-          <p>{{ $t(`condition2`) }}</p>
+          <p>{{ status ? $t(`condition2_rec`) : $t(`condition2`) }}</p>
         </div>
         <div class="condition__item">
           <h3>{{ $t(`Здоровье`) }}</h3>
           <div>
-            <p>{{ $t(`condition3`) }}</p>
+            <p>{{ status ? $t(`condition3_rec`) : $t(`condition3`) }}</p>
             <a href="#">{{ $t(`Пройти психологический тест`) }}<svg xmlns="http://www.w3.org/2000/svg" width="25"
                 height="16" viewBox="0 0 25 16" fill="none">
                 <path
@@ -24,17 +24,24 @@
         </div>
         <div class="condition__item">
           <h3>{{ $t(`История`) }}</h3>
-          <p>{{ $t(`condition4`) }}</p>
+          <p>{{ status ? $t(`condition4_rec`) : $t('condition4') }}</p>
         </div>
         <div class="condition__item">
           <h3>{{ $t(`Вес и ИМТ`) }}</h3>
-          <p>{{ $t(`condition5`) }}</p>
+          <p>{{ status ? $t(`condition5_rec`) : $t(`condition5`) }}</p>
         </div>
         <div class="condition__item">
-          <h3>{{ $t(`Внешность`) }}</h3>
-          <p>{{ $t(`condition6`) }}</p>
+          <h3>{{ status ? $t(`Характер`) : $t('Внешность') }}</h3>
+          <p>{{ status ? $t(`condition6_rec`) : $t(`condition6`) }}</p>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+
+<script lang="ts" setup>
+const props = defineProps({
+  status: { type: Boolean, default: false }
+})
+</script>

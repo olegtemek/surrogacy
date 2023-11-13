@@ -5,6 +5,53 @@
   background-color: $pink;
   text-align: center;
 
+  &__toggler {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width:660px) {
+      margin-bottom: 20px;
+    }
+
+    div {
+      color: $black;
+      background-color: $light-pink;
+      padding: 16px 86px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+
+      &:first-child {
+        border-radius: 12px 0px 0px 12px;
+      }
+
+      &:last-child {
+        border-radius: 0px 12px 12px 0px;
+      }
+
+      @media (max-width:1280px) {
+        padding: 12px 60px;
+      }
+
+      @media (max-width:660px) {
+        padding: 12px 40px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      @media (max-width:480px) {
+        padding: 12px 30px;
+      }
+
+      &.active {
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+
   p {
     padding-bottom: 48px;
     padding-top: 32px;

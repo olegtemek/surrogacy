@@ -102,5 +102,13 @@
   "Анкеты": "Questionnaires",
   "Личные данные": "Personal data",
   "Главная страница": "Main page",
-  "Авторизация": "Sign in"
+  "Авторизация": "Sign in",
+  "Реципиент": "Recipient",
+  "condition2_rec": "Recipients must be between the ages of 20 and 38. We adhere to this age range to ensure optimal conditions for successful pregnancy and recipient health.",
+  "condition3_rec": "Our recipients must have a healthy child as well as their own excellent physical and psychological condition.",
+  "condition4_rec": "Potential recipients should have a successful pregnancy and delivery experience. This helps to ensure the best chance of a successful pregnancy for the mother.",
+  "condition5_rec": "Recipients should be of a healthy weight and within a normal BMI. Being overweight can increase risks to pregnancy and the health of both the donor and the expectant mother.",
+  "condition6_rec": "You should stick to healthy sexual relationships, be responsible to yourself and your baby.",
+  "Характер": "Nature",
+  "Условия чтобы стать реципиентом": "Conditions for becoming a recipient"
 }
