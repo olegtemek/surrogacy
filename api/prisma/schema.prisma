@@ -22,21 +22,20 @@ model User {
 }
 
 model Product {
-  id                 Int      @id @default(autoincrement()) // Уникальный id 
-  created_at         DateTime @default(now()) // Время создания анкеты
-  status             Boolean  @default(false) // Статус для модерации
-  number             String // Номер телефона
-  images             String[] // Фотографии
-  orders             Order[] // Это для тех, кто оставляет заявки
-  age                Int
-  weight             Int // Вес (в кг)
-  height             Int // Рост (в см)
-  has_twins          String // В семье есть близнецы
-  menstrual_cycle    String // Регулярный менструальный цикл
-  has_twins_en       String // В семье есть близнецы
-  menstrual_cycle_en String // Регулярный менструальный цикл
-  email              String
-
+  id                        Int      @id @default(autoincrement()) // Уникальный id 
+  created_at                DateTime @default(now()) // Время создания анкеты
+  status                    Boolean  @default(false) // Статус для модерации
+  number                    String // Номер телефона
+  images                    String[] // Фотографии
+  orders                    Order[] // Это для тех, кто оставляет заявки
+  age                       Int
+  weight                    Int // Вес (в кг)
+  height                    Int // Рост (в см)
+  has_twins                 String // В семье есть близнецы
+  menstrual_cycle           String // Регулярный менструальный цикл
+  has_twins_en              String? // В семье есть близнецы
+  menstrual_cycle_en        String? // Регулярный менструальный цикл
+  email                     String
   name                      String?
   name_en                   String? // Наименование на английском
   nationality               String? // Национальность
