@@ -43,7 +43,7 @@ export class CreateProductDto {
   has_twins: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   has_twins_en: string;
 
   @IsString()
@@ -51,7 +51,7 @@ export class CreateProductDto {
   menstrual_cycle: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   menstrual_cycle_en: string;
 
   @IsString()
