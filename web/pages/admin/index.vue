@@ -1,6 +1,9 @@
 <template>
   <div class="ankets">
     <div class="container">
+      <div to="/" class="admin__top_link">
+        <TheLogo />
+      </div>
       <h1 class="title">Анкеты</h1>
       <AdminMenu>
         <template #filters>

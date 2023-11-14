@@ -1,6 +1,9 @@
 <template>
   <div class="access">
     <div class="container">
+      <div to="/" class="admin__top_link">
+        <TheLogo />
+      </div>
       <h1 class="title">Доступ</h1>
       <AdminMenu>
         <template #filters>

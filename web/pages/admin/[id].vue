@@ -1,6 +1,9 @@
 <template>
   <div class="form">
     <div class="container" v-if="product">
+      <div to="/" class="admin__top_link">
+        <TheLogo />
+      </div>
       <div class="form__wrapper">
         <div class="form__top">
           <div class="heart">
