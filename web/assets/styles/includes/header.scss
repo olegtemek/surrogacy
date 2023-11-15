@@ -133,6 +133,7 @@
     @media (max-width:960px) {
       order: 2;
       transform: translateX(-120px);
+      z-index: 2;
     }
 
     @media (max-width:660px) {
