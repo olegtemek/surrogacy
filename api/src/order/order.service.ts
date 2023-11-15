@@ -4,6 +4,7 @@ import { LangService } from 'lib/lang';
 import { UserRepository } from 'src/user/user.repository';
 import { ProductRepository } from 'src/product/product.repository';
 import { OrderRepository } from './order.repository';
+import { BotService } from 'lib/bot';
 
 @Injectable()
 export class OrderService {
@@ -12,6 +13,7 @@ export class OrderService {
     private readonly userRepository: UserRepository,
     private readonly productRepository: ProductRepository,
     private readonly orderRepository: OrderRepository,
+    private readonly botService: BotService,
   ) {}
   async create(userId: number, createOrderDto: CreateOrderDto) {
     const product = await this.productRepository.findOne(
@@ -36,6 +38,10 @@ export class OrderService {
     }
 
     const order = await this.orderRepository.create(userId, product.id);
+
+    await this.botService.send(
+      `Поступила новая заявка, проверьте её в панели администратора!!`,
+    );
 
     return { order, message: this.lang.message('global.successful_order') };
   }

@@ -7,6 +7,8 @@ import { LangService } from 'lib/lang';
 import { FileService } from 'lib/file';
 import { ProductRepository } from './product.repository';
 import { PrismaService } from 'lib/prisma';
+import { BotService } from 'lib/bot';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
@@ -20,6 +22,7 @@ import { PrismaService } from 'lib/prisma';
       }),
       inject: [ConfigService],
     }),
+    HttpModule,
   ],
   controllers: [ProductController],
   providers: [
@@ -28,6 +31,7 @@ import { PrismaService } from 'lib/prisma';
     FileService,
     ProductRepository,
     PrismaService,
+    BotService,
   ],
 })
 export class ProductModule {}

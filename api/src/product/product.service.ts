@@ -9,6 +9,7 @@ import { LangService } from 'lib/lang';
 import { FileService } from 'lib/file';
 import { ProductRepository } from './product.repository';
 import { Product } from '@prisma/client';
+import { BotService } from 'lib/bot';
 
 @Injectable()
 export class ProductService {
@@ -16,6 +17,7 @@ export class ProductService {
     private readonly lang: LangService,
     private readonly fileService: FileService,
     private readonly productRepository: ProductRepository,
+    private readonly botService: BotService,
   ) {}
   async create(createProductDto: CreateProductDto) {
     const files = await this.fileService.saveFiles(createProductDto.images);
@@ -54,6 +56,11 @@ export class ProductService {
         email: createProductDto.email,
         city_en: createProductDto.city,
       });
+
+      await this.botService.send(
+        `Поступила новая анкета\nИмя: ${product.name_en}\nНомер: ${product.number}\nПроверьте её в панели администратора!!`,
+      );
+
       return {
         product: product,
         message: this.lang.message('global.successful_create'),
@@ -87,6 +94,10 @@ export class ProductService {
       email: createProductDto.email,
       city: createProductDto.city,
     });
+
+    await this.botService.send(
+      `Поступила новая анкета\nИмя: ${product.name}\nНомер: ${product.number}\nПроверьте её в панели администратора!!`,
+    );
 
     return {
       product: product,

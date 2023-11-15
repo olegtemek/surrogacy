@@ -22,6 +22,7 @@
       font-size: 18px;
       font-weight: 500;
       line-height: 24px;
+      cursor: pointer;
 
       &:first-child {
         border-radius: 12px 0px 0px 12px;
@@ -48,6 +49,7 @@
       &.active {
         background-color: $purple;
         color: $white;
+        cursor: default;
       }
     }
   }

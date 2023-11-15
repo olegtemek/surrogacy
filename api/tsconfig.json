@@ -35,6 +35,12 @@
       ],
       "lib/file/*": [
         "libs/file/src/*"
+      ],
+      "lib/bot": [
+        "libs/bot/src"
+      ],
+      "lib/bot/*": [
+        "libs/bot/src/*"
       ]
     }
   }

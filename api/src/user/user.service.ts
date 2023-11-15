@@ -8,6 +8,7 @@ import { LoginUserDto } from './dto/login-user.dto';
 import { LangService } from 'lib/lang';
 import { ChangeStatusDto } from './dto/change-status.dto';
 import { ExistUserDto } from './dto/exist-user.dto';
+import { BotService } from 'lib/bot';
 
 @Injectable()
 export class UserService {
@@ -15,6 +16,7 @@ export class UserService {
     private readonly jwt: JwtService,
     private readonly userRepository: UserRepository,
     private readonly lang: LangService,
+    private readonly botService: BotService,
   ) {}
   async registration(createUserDto: CreateUserDto) {
     const user = await this.userRepository.findByNumber(createUserDto.number);
@@ -34,6 +36,10 @@ export class UserService {
     const tokens = await this.generateTokens(registeredUser.id);
 
     delete registeredUser.password;
+
+    await this.botService.send(
+      `Зарегистрировался новый клиент\nИмя: ${registeredUser.name}\nНомер: ${registeredUser.number}\nПроверьте в панели администратора!!`,
+    );
 
     return {
       user: registeredUser,

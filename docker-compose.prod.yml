@@ -66,6 +66,8 @@ services:
         - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/mom?schema=public
         - SECRET=TEMEK
         - FALLBACK_LANGUAGE=ru
+        - CHAT_ID=id
+        - TOKEN_BOT=token
     command: sh -c "sleep 10 && npx prisma migrate deploy && npm run start:prod"
     networks:
       - mom_network
