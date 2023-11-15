@@ -41,7 +41,7 @@
         </div>
 
         <div class="header__burger" @click="openMenu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
             <path d="M10 16H38M10 24H38M10 32H17H24H38" stroke="#3D3D3A" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
