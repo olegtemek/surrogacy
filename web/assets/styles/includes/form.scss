@@ -199,6 +199,10 @@
     border-radius: 32px;
     box-sizing: border-box;
 
+    @media (max-width:1280px) {
+      padding: 24px;
+    }
+
     h2 {
       text-align: left;
       margin-bottom: 56px;
