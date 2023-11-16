@@ -43,7 +43,7 @@
         <input type="text" v-model.trim="user.name" :placeholder="$t('Имя')">
         <input type="text" v-model.trim="user.number" :placeholder="$t('Телефон')" v-maska data-maska="+#-###-###-##-##">
         <input type="password" v-model.trim="user.password" :placeholder="$t('Пароль')">
-        <button @click="sendRegister">{{ $t('Оставить заявку') }}</button>
+        <button @click="sendRegister" :class="block ? 'disable' : ''">{{ $t('Оставить заявку') }}</button>
       </div>
     </div>
   </div>
@@ -63,8 +63,10 @@ const user = ref({
   number: ''
 })
 const userStore = useUserStore();
+const block = ref(false)
 
 const sendRegister = async () => {
+
   if (!user.value.name || user.value.name == '' || user.value.name.length > 32) {
     return useAlert(i18n.t('Проверьте правильность поля имя'), true)
   }
@@ -77,6 +79,10 @@ const sendRegister = async () => {
     return useAlert(i18n.t('Проверьте правильность поля номер'), true)
   }
 
+  block.value = true
+  setTimeout(() => {
+    block.value = false
+  }, 3000)
   await userStore.exist(user.value.number, user.value.password, user.value.name)
 
 }

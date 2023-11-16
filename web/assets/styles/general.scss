@@ -213,3 +213,11 @@ body {
   margin-bottom: 20px;
   width: 280px;
 }
+
+
+.disable {
+  cursor: default !important;
+  pointer-events: none !important;
+  opacity: 0.8 !important;
+
+}

@@ -1,11 +1,5 @@
-import { Transform, Type } from 'class-transformer';
-import {
-  IsNotEmpty,
-  IsBoolean,
-  IsInt,
-  IsOptional,
-  IsString,
-} from 'class-validator';
+import { Type } from 'class-transformer';
+import { IsNotEmpty, IsInt, IsOptional, IsString } from 'class-validator';
 import {
   HasMimeType,
   IsFiles,
@@ -15,7 +9,7 @@ import {
 
 export class CreateProductDto {
   @IsFiles()
-  @MaxFileSize(1e6, { each: true })
+  @MaxFileSize(30e6, { each: true })
   @HasMimeType(['image/jpeg', 'image/png'], { each: true })
   images: MemoryStoredFile[];
 

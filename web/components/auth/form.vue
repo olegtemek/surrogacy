@@ -169,7 +169,7 @@
               }" />
           </div>
 
-          <FormKit type="submit" :label="$t('Далее')" />
+          <FormKit type="submit" :label="$t('Далее')" v-if="!block" />
         </FormKit>
 
       </div>
@@ -184,10 +184,13 @@
 import { useProductStore } from '~/store/product';
 const i18n = useI18n();
 const productStore = useProductStore()
-
+const block = ref(false)
 const submitHandler = async (e: Object) => {
+  block.value = true
+  setTimeout(() => {
+    block.value = false
+  }, 3000)
   await productStore.create(e as IProduct)
-
 }
 
 </script>

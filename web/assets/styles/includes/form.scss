@@ -211,6 +211,10 @@
     margin-bottom: 20px;
     position: relative;
 
+    @media (max-width:1280px) {
+      width: 100%;
+    }
+
     input,
     textarea {
       width: 100%;
