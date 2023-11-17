@@ -160,20 +160,24 @@
   }
 
   &__slider {
-    width: 726px;
+    width: 466px;
     position: relative;
     margin: 0 auto;
 
     @media (max-width:1280px) {
-      width: 600px;
+      width: 500px;
     }
 
     @media (max-width:960px) {
-      width: 460px;
+      width: 380px;
     }
 
     @media (max-width:660px) {
-      width: 90%;
+      width: 280px;
+    }
+
+    @media (max-width:480px) {
+      width: 240px;
     }
 
     .swiper {
