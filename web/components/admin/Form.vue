@@ -5,8 +5,8 @@
         length: $t('ФИО') + $t('не может быть больше 120 символов'),
         required: $t('ФИО') + ' ' + $t('обязательно')
       }" />
-    <FormKit type="text" name="name_en" validation="required|length:0,120" label="ФИО на английском"
-      :value="product.name_en" :validation-messages="{
+    <FormKit type="text" name="name_en" validation="length:0,120" label="ФИО на английском" :value="product.name_en"
+      :validation-messages="{
         length: $t('ФИО') + $t('не может быть больше 120 символов'),
         required: $t('ФИО') + ' ' + $t('обязательно')
       }
