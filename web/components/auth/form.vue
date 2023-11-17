@@ -52,11 +52,11 @@
                 length: $t('Электронная почта') + $t('не может быть больше 120 символов'),
                 required: $t('Электронная почта') + ' ' + $t('обязательно')
               }" />
-            <FormKit type="text" name="age" validation="required|number" :label="$t('Возраст')" number
-              :placeholder="$t('Возраст')" :validation-messages="{
-                length: $t('Возраст') + $t('не может быть больше 120 символов'),
-                required: $t('Возраст') + ' ' + $t('обязательно'),
-                number: $t('Возраст') + ' ' + $t('должен быть цифрой.')
+            <FormKit type="text" name="age" validation="required|number" :label="$t('Год рождения')" number
+              :placeholder="$t('Год рождения')" :validation-messages="{
+                length: $t('Год рождения') + $t('не может быть больше 120 символов'),
+                required: $t('Год рождения') + ' ' + $t('обязательно'),
+                number: $t('Год рождения') + ' ' + $t('должен быть цифрой.')
               }" />
             <FormKit type="text" name="nationality" validation="required|length:0,120" :label="$t('Национальность')"
               :placeholder="$t('Национальность')" :validation-messages="{
