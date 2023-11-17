@@ -29,7 +29,7 @@
         required: $t('Страна') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="country_en" validation="required|length:0,120" label="Страна на английском"
+    <FormKit type="text" name="country_en" validation="length:0,120" label="Страна на английском"
       :value="product.country_en" :validation-messages="{
         length: $t('Страна') + $t('не может быть больше 120 символов'),
         required: $t('Страна') + ' ' + $t('обязательно')
@@ -41,8 +41,8 @@
         required: $t('Город') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="city_en" validation="required|length:0,120" label="Город на английском"
-      :value="product.city_en" :validation-messages="{
+    <FormKit type="text" name="city_en" validation="length:0,120" label="Город на английском" :value="product.city_en"
+      :validation-messages="{
         length: $t('Город') + $t('не может быть больше 120 символов'),
         required: $t('Город') + ' ' + $t('обязательно')
       }
@@ -75,7 +75,7 @@
         required: $t('Национальность') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="nationality_en" validation="required|length:0,120" label="Национальность на английском"
+    <FormKit type="text" name="nationality_en" validation="length:0,120" label="Национальность на английском"
       :value="product.nationality_en" :validation-messages="{
         length: $t('Национальность') + $t('не может быть больше 120 символов'),
         required: $t('Национальность') + ' ' + $t('обязательно')
@@ -87,7 +87,7 @@
         required: $t('Цвет глаз') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="eye_color_en" validation="required|length:0,120" label="Цвет глаз на английском"
+    <FormKit type="text" name="eye_color_en" validation="length:0,120" label="Цвет глаз на английском"
       :value="product.eye_color_en" :validation-messages="{
         length: $t('Цвет глаз') + $t('не может быть больше 120 символов'),
         required: $t('Цвет глаз') + ' ' + $t('обязательно')
@@ -99,7 +99,7 @@
         required: $t('Цвет волос') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="hair_color_en" validation="required|length:0,120" label="Цвет волос на английском"
+    <FormKit type="text" name="hair_color_en" validation="length:0,120" label="Цвет волос на английском"
       :value="product.hair_color_en" :validation-messages="{
         length: $t('Цвет волос') + $t('не может быть больше 120 символов'),
         required: $t('Цвет волос') + ' ' + $t('обязательно')
@@ -111,7 +111,7 @@
         required: $t('Вредные привычки') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="habits_en" validation="required|length:0,120" label="Вредные привычки на английском"
+    <FormKit type="text" name="habits_en" validation="length:0,120" label="Вредные привычки на английском"
       :value="product.habits_en" :validation-messages="{
         length: $t('Вредные привычки') + $t('не может быть больше 120 символов'),
         required: $t('Вредные привычки') + ' ' + $t('обязательно')
@@ -124,7 +124,7 @@
         required: $t('Аллергии') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="allergies_en" validation="required|length:0,120" label="Аллергии на английском"
+    <FormKit type="text" name="allergies_en" validation="length:0,120" label="Аллергии на английском"
       :value="product.allergies_en" :validation-messages="{
         length: $t('Аллергии') + $t('не может быть больше 120 символов'),
         required: $t('Аллергии') + ' ' + $t('обязательно')
@@ -136,7 +136,7 @@
         required: $t('Заболевания') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="chronic_diseases_en" validation="required|length:0,120" label="Заболевания на английском"
+    <FormKit type="text" name="chronic_diseases_en" validation="length:0,120" label="Заболевания на английском"
       :value="product.chronic_diseases_en" :validation-messages="{
         length: $t('Заболевания') + $t('не может быть больше 120 символов'),
         required: $t('Заболевания') + ' ' + $t('обязательно')
@@ -148,7 +148,7 @@
         required: $t('Профессия') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="profession_en" validation="required|length:0,120" label="Профессия на английском"
+    <FormKit type="text" name="profession_en" validation="length:0,120" label="Профессия на английском"
       :value="product.profession_en" :validation-messages="{
         length: $t('Профессия') + $t('не может быть больше 120 символов'),
         required: $t('Профессия') + ' ' + $t('обязательно')
@@ -160,7 +160,7 @@
         required: $t('Религия') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="religion_en" validation="required|length:0,120" label="Религия на английском"
+    <FormKit type="text" name="religion_en" validation="length:0,120" label="Религия на английском"
       :value="product.religion_en" :validation-messages="{
         length: $t('Религия') + $t('не может быть больше 120 символов'),
         required: $t('Религия') + ' ' + $t('обязательно')
@@ -173,7 +173,7 @@
       }
         " />
     <FormKit type="text" name="has_twins_en" label="У вас в семье были близнецы на английском"
-      :value="product.has_twins_en" validation="required|length:0,120" :validation-messages="{
+      :value="product.has_twins_en" validation="length:0,120" :validation-messages="{
         length: $t('У вас в семье были близнецы') + $t('не может быть больше 120 символов'),
         required: $t('У вас в семье были близнецы') + ' ' + $t('обязательно')
       }
@@ -186,7 +186,7 @@
       }
         " />
     <FormKit type="text" name="menstrual_cycle_en" label="У вас регулярный менструальный цикл на английском"
-      :value="product.menstrual_cycle_en" validation="required|length:0,120" :validation-messages="{
+      :value="product.menstrual_cycle_en" validation="length:0,120" :validation-messages="{
         length: $t('У вас регулярный менструальный цикл') + $t('не может быть больше 120 символов'),
         required: $t('У вас регулярный менструальный цикл') + ' ' + $t('обязательно')
       }
@@ -197,8 +197,8 @@
         required: $t('Была беременна') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="pregnancy_outcome_en" validation="required|length:0,120"
-      label="Была беременна на английском" :value="product.pregnancy_outcome_en" :validation-messages="{
+    <FormKit type="text" name="pregnancy_outcome_en" validation="length:0,120" label="Была беременна на английском"
+      :value="product.pregnancy_outcome_en" :validation-messages="{
         length: $t('Была беременна') + $t('не может быть больше 120 символов'),
         required: $t('Была беременна') + ' ' + $t('обязательно')
       }
@@ -209,9 +209,8 @@
         required: $t('Не принимает противозачаточные средства') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="contraceptive_use_en" validation="required|length:0,120"
-      :value="product.contraceptive_use_en" label="Не принимает противозачаточные средства на английском"
-      :validation-messages="{
+    <FormKit type="text" name="contraceptive_use_en" validation="length:0,120" :value="product.contraceptive_use_en"
+      label="Не принимает противозачаточные средства на английском" :validation-messages="{
         length: $t('Не принимает противозачаточные средства') + $t('не может быть больше 120 символов'),
         required: $t('Не принимает противозачаточные средства') + ' ' + $t('обязательно')
       }
@@ -222,7 +221,7 @@
         required: $t('Проблемы со здоровьем') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="health_problems_en" validation="required|length:0,120" :value="product.health_problems_en"
+    <FormKit type="text" name="health_problems_en" validation="length:0,120" :value="product.health_problems_en"
       label="Проблемы со здоровьем на английском" :validation-messages="{
         length: $t('Проблемы со здоровьем') + $t('не может быть больше 120 символов'),
         required: $t('Проблемы со здоровьем') + ' ' + $t('обязательно')
@@ -234,7 +233,7 @@
         required: $t('Генетические заболевания в семье') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="family_medical_history_en" validation="required|length:0,120"
+    <FormKit type="text" name="family_medical_history_en" validation="length:0,120"
       :value="product.family_medical_history_en" label="Генетические заболевания в семье" :validation-messages="{
         length: $t('Генетические заболевания в семье') + $t('не может быть больше 120 символов'),
         required: $t('Генетические заболевания в семье') + ' ' + $t('обязательно')
@@ -248,7 +247,7 @@
         required: $t('Репродуктивная история') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="reproductive_history_en" validation="required|length:0,120"
+    <FormKit type="textarea" name="reproductive_history_en" validation="length:0,120"
       :value="product.reproductive_history_en" label="Репродуктивная история на английском" :validation-messages="{
         length: $t('Репродуктивная история') + $t('не может быть больше 120 символов'),
         required: $t('Репродуктивная история') + ' ' + $t('обязательно')
@@ -260,8 +259,8 @@
         required: $t('Дополнительная информация') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="additional_info_en" validation="required|length:0,120"
-      :value="product.additional_info_en" label="Дополнительная информация на английском" :validation-messages="{
+    <FormKit type="textarea" name="additional_info_en" validation="length:0,120" :value="product.additional_info_en"
+      label="Дополнительная информация на английском" :validation-messages="{
         length: $t('Дополнительная информация') + $t('не может быть больше 120 символов'),
         required: $t('Дополнительная информация') + ' ' + $t('обязательно')
       }
@@ -272,9 +271,9 @@
         required: $t('Семья/Генетическая история') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="genetic_history_en" validation="required|length:0,120"
-      :value="product.genetic_history_en" label="Семья/Генетическая история на английском"
-      :help="$t('Пожалуйста, опишите как можно подробнее')" :validation-messages="{
+    <FormKit type="textarea" name="genetic_history_en" validation="length:0,120" :value="product.genetic_history_en"
+      label="Семья/Генетическая история на английском" :help="$t('Пожалуйста, опишите как можно подробнее')"
+      :validation-messages="{
         length: $t('Семья/Генетическая история') + $t('не может быть больше 120 символов'),
         required: $t('Семья/Генетическая история') + ' ' + $t('обязательно')
       }
