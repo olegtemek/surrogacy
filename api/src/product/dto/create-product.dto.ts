@@ -145,7 +145,6 @@ export class CreateProductDto {
   reproductive_history: string;
 
   @IsString()
-  @IsNotEmpty()
   @IsOptional()
   reproductive_history_en: string;
 
@@ -194,7 +193,6 @@ export class CreateProductDto {
   genetic_history: string;
 
   @IsString()
-  @IsNotEmpty()
   @IsOptional()
   genetic_history_en: string;
 }
