@@ -47,7 +47,7 @@
         required: $t('Город') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="text" name="age" validation="required|number" label="Возраст" number :value="product.age"
+    <FormKit type="text" name="age" validation="required|number" label="Год рождения" number :value="product.age"
       :placeholder="$t('Год рождения')" :validation-messages="{
         length: $t('Год рождения') + $t('не может быть больше 120 символов'),
         required: $t('Год рождения') + ' ' + $t('обязательно'),

@@ -13,7 +13,7 @@
               <img :src="`${useRuntimeConfig().public.image + 'uploads/' + product.images[0]}`" alt="ank">
               <div>
                 <span>ID: {{ product.id }}</span>
-                <span>{{ $t('Возраст') }}: {{ product.age ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Год рождения') }}: {{ product.age ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Национальность') }}: {{ product.nationality ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Рост') }}: {{ product.height }}</span>
                 <span>{{ $t('Вес') }}: {{ product.weight }}</span>
@@ -68,7 +68,7 @@
               <img :src="`${useRuntimeConfig().public.image + 'uploads/' + product.images[0]}`" alt="ank">
               <div>
                 <span>ID: {{ product.id }}</span>
-                <span>{{ $t('Возраст') }}: {{ product.age }}</span>
+                <span>{{ $t('Год рождения') }}: {{ product.age }}</span>
                 <span>{{ $t('Национальность') }}: {{ product.nationality_en ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Рост') }}: {{ product.height }}</span>
                 <span>{{ $t('Вес') }}: {{ product.weight }}</span>
