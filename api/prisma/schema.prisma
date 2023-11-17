@@ -72,6 +72,14 @@ model Product {
   additional_info_en        String? // Дополнительная информация на английском
   genetic_history           String? // Генетическая история
   genetic_history_en        String? // Генетическая история на английском
+  resus                     String? // Резус
+  resus_en                  String? // Резус на английском
+  blood_type                String? // группа крови
+  blood_type_en             String? // группа крови на английском
+  childrens                 String? // кол-во детей
+  childrens_en              String? //кол-во детей на английскои
+  education                 String? //образование
+  education_en              String? //образование на английском
 }
 
 model Order {

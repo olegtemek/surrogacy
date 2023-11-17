@@ -21,7 +21,7 @@
 
             <div class="profile__list-item-block">
               <span>ID: {{ product.id }}</span>
-              <span>{{ $t('Возраст') }}: {{ product.age }}</span>
+              <span>{{ $t('Год рождения') }}: {{ product.age }}</span>
               <span>{{ $t('Национальность') }}: {{ product.nationality ?? $t('Неизвестно') }}</span>
               <span>{{ $t('Рост') }}: {{ product.height }} см</span>
               <span>{{ $t('Вес') }}: {{ product.weight }} кг</span>

@@ -55,6 +55,10 @@ export class ProductService {
         genetic_history_en: createProductDto.genetic_history,
         email: createProductDto.email,
         city_en: createProductDto.city,
+        resus_en: createProductDto.resus,
+        blood_type_en: createProductDto.blood_type,
+        childrens_en: createProductDto.childrens,
+        education_en: createProductDto.education,
       });
 
       await this.botService.send(
@@ -93,6 +97,10 @@ export class ProductService {
       genetic_history: createProductDto.genetic_history,
       email: createProductDto.email,
       city: createProductDto.city,
+      resus: createProductDto.resus,
+      blood_type: createProductDto.blood_type,
+      childrens: createProductDto.childrens,
+      education: createProductDto.education,
     });
 
     await this.botService.send(
@@ -208,6 +216,14 @@ export class ProductService {
       genetic_history: updateProductDto.genetic_history,
       genetic_history_en: updateProductDto.genetic_history_en,
       city_en: updateProductDto.city_en,
+      resus: updateProductDto.resus,
+      resus_en: updateProductDto.resus_en,
+      blood_type: updateProductDto.blood_type,
+      blood_type_en: updateProductDto.blood_type_en,
+      childrens: updateProductDto.childrens,
+      childrens_en: updateProductDto.childrens_en,
+      education: updateProductDto.education,
+      education_en: updateProductDto.education_en,
     });
 
     return {

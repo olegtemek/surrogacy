@@ -195,4 +195,36 @@ export class CreateProductDto {
   @IsString()
   @IsOptional()
   genetic_history_en: string;
+
+  @IsString()
+  @IsNotEmpty()
+  resus: string;
+
+  @IsString()
+  @IsOptional()
+  resus_en: string;
+
+  @IsString()
+  @IsNotEmpty()
+  blood_type: string;
+
+  @IsString()
+  @IsOptional()
+  blood_type_en: string;
+
+  @IsString()
+  @IsNotEmpty()
+  childrens: string;
+
+  @IsString()
+  @IsOptional()
+  childrens_en: string;
+
+  @IsString()
+  @IsNotEmpty()
+  education: string;
+
+  @IsString()
+  @IsOptional()
+  education_en: string;
 }

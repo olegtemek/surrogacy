@@ -65,6 +65,14 @@ CREATE TABLE "Product" (
     "additional_info_en" TEXT,
     "genetic_history" TEXT,
     "genetic_history_en" TEXT,
+    "resus" TEXT,
+    "resus_en" TEXT,
+    "blood_type" TEXT,
+    "blood_type_en" TEXT,
+    "childrens" TEXT,
+    "childrens_en" TEXT,
+    "education" TEXT,
+    "education_en" TEXT,
 
     CONSTRAINT "Product_pkey" PRIMARY KEY ("id")
 );

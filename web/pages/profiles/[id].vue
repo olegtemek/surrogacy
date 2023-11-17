@@ -13,35 +13,40 @@
               <img :src="`${useRuntimeConfig().public.image + 'uploads/' + product.images[0]}`" alt="ank">
               <div>
                 <span>ID: {{ product.id }}</span>
-                <span>{{ $t('Возраст') }}: {{ product.age }}</span>
-                <span>{{ $t('Национальность') }}: {{ product.nationality }}</span>
+                <span>{{ $t('Возраст') }}: {{ product.age ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Национальность') }}: {{ product.nationality ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Рост') }}: {{ product.height }}</span>
                 <span>{{ $t('Вес') }}: {{ product.weight }}</span>
-                <span>{{ $t('Цвет глаз') }}: {{ product.eye_color }}</span>
-                <span>{{ $t('Цвет волос') }}: {{ product.hair_color }}</span>
+                <span>{{ $t('Цвет глаз') }}: {{ product.eye_color ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Цвет волос') }}: {{ product.hair_color ?? $t('Неизвестно') }}</span>
               </div>
 
               <div>
-                <span>{{ $t('Вредные привычки') }}: {{ product.habits }}</span>
-                <span>{{ $t('Страна') }}: {{ product.country }}</span>
-                <span>{{ $t('Аллергии') }}: {{ product.allergies }}</span>
-                <span>{{ $t('Заболевания') }}: {{ product.chronic_diseases }}</span>
-                <span>{{ $t('Профессия') }}: {{ product.profession }}</span>
-                <span>{{ $t('Религия') }}: {{ product.religion }}</span>
+                <span>{{ $t('Вредные привычки') }}: {{ product.habits ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Страна') }}: {{ product.country ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Аллергии') }}: {{ product.allergies ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Заболевания') }}: {{ product.chronic_diseases ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Профессия') }}: {{ product.profession ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Религия') }}: {{ product.religion ?? $t('Неизвестно') }}</span>
               </div>
             </div>
 
             <div class="ank__item">
               <h4>{{ $t('Репродуктивная история') }}</h4>
-              <p>{{ product.reproductive_history }}</p>
+              <p>{{ product.reproductive_history ?? $t('Неизвестно') }}</p>
             </div>
 
             <div class="ank__item column">
-              <p>{{ $t('У вас в семье были близнецы') }} {{ product.has_twins }}</p>
-              <p>{{ $t('У вас регулярный менструальный цикл') }} {{ product.menstrual_cycle }}</p>
-              <p>{{ $t('Была беременна') }} {{ product.pregnancy_outcome }}</p>
-              <p>{{ $t('Не принимает противозачаточные средства') }} {{ product.contraceptive_use }}</p>
-              <p>{{ $t('Проблемы со здоровьем') }} {{ product.health_problems }}</p>
+              <p>{{ $t('У вас в семье были близнецы') }} {{ product.has_twins ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('У вас регулярный менструальный цикл') }} {{ product.menstrual_cycle ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Была беременна') }} {{ product.pregnancy_outcome ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Не принимает противозачаточные средства') }} {{ product.contraceptive_use ?? $t('Неизвестно') }}
+              </p>
+              <p>{{ $t('Проблемы со здоровьем') }} {{ product.health_problems ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Кол-во детей') }} {{ product.childrens ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Резус фактор') }} {{ product.resus ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Группа крови') }} {{ product.blood_type ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Образование') }} {{ product.education ?? $t('Неизвестно') }}</p>
             </div>
 
             <div class="ank__item column">
@@ -93,6 +98,10 @@
               <p>{{ $t('Не принимает противозачаточные средства') }} {{ product.contraceptive_use_en ?? $t('Неизвестно')
               }}</p>
               <p>{{ $t('Проблемы со здоровьем') }} {{ product.health_problems_en ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Кол-во детей') }} {{ product.childrens_en ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Резус фактор') }} {{ product.resus_en ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Группа крови') }} {{ product.blood_type_en ?? $t('Неизвестно') }}</p>
+              <p>{{ $t('Образование') }} {{ product.education_en ?? $t('Неизвестно') }}</p>
             </div>
 
             <div class="ank__item column">

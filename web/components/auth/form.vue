@@ -110,6 +110,26 @@
                 length: $t('Религия') + $t('не может быть больше 120 символов'),
                 required: $t('Религия') + ' ' + $t('обязательно')
               }" />
+            <FormKit type="text" name="childrens" validation="required|length:0,120" :label="$t('Кол-во детей')"
+              :placeholder="$t('Кол-во детей')" :validation-messages="{
+                length: $t('Кол-во детей') + $t('не может быть больше 120 символов'),
+                required: $t('Кол-во детей') + ' ' + $t('обязательно')
+              }" />
+            <FormKit type="text" name="resus" validation="required|length:0,120" :label="$t('Резус фактор')"
+              :placeholder="$t('Резус фактор')" :validation-messages="{
+                length: $t('Резус фактор') + $t('не может быть больше 120 символов'),
+                required: $t('Резус фактор') + ' ' + $t('обязательно')
+              }" />
+            <FormKit type="text" name="blood_type" validation="required|length:0,120" :label="$t('Группа крови')"
+              :placeholder="$t('Группа крови')" :validation-messages="{
+                length: $t('Группа крови') + $t('не может быть больше 120 символов'),
+                required: $t('Группа крови') + ' ' + $t('обязательно')
+              }" />
+            <FormKit type="text" name="education" validation="required|length:0,120" :label="$t('Образование')"
+              :placeholder="$t('Образование')" :validation-messages="{
+                length: $t('Образование') + $t('не может быть больше 120 символов'),
+                required: $t('Образование') + ' ' + $t('обязательно')
+              }" />
             <FormKit type="text" name="has_twins" :label="$t('У вас в семье были близнецы')"
               :placeholder="$t('У вас в семье были близнецы')" validation="required|length:0,120" :validation-messages="{
                 length: $t('У вас в семье были близнецы') + $t('не может быть больше 120 символов'),
@@ -150,21 +170,21 @@
               }" />
           </div>
           <div class="formkit-wrapper-flex row">
-            <FormKit type="textarea" name="reproductive_history" validation="required|length:0,120"
+            <FormKit type="textarea" name="reproductive_history" validation="required|length:0,500"
               :label="$t('Репродуктивная история')" :placeholder="$t('Репродуктивная история')" :validation-messages="{
-                length: $t('Репродуктивная история') + $t('не может быть больше 120 символов'),
+                length: $t('Репродуктивная история') + $t('не может быть больше 500 символов'),
                 required: $t('Репродуктивная история') + ' ' + $t('обязательно')
               }" />
-            <FormKit type="textarea" name="additional_info" validation="required|length:0,120"
+            <FormKit type="textarea" name="additional_info" validation="required|length:0,500"
               :label="$t('Дополнительная информация')" :placeholder="$t('Дополнительная информация')"
               :validation-messages="{
-                length: $t('Дополнительная информация') + $t('не может быть больше 120 символов'),
+                length: $t('Дополнительная информация') + $t('не может быть больше 500 символов'),
                 required: $t('Дополнительная информация') + ' ' + $t('обязательно')
               }" />
-            <FormKit type="textarea" name="genetic_history" validation="required|length:0,120"
+            <FormKit type="textarea" name="genetic_history" validation="required|length:0,500"
               :label="$t('Семья/Генетическая история')" :placeholder="$t('Семья/Генетическая история')"
               :help="$t('Пожалуйста, опишите как можно подробнее')" :validation-messages="{
-                length: $t('Семья/Генетическая история') + $t('не может быть больше 120 символов'),
+                length: $t('Семья/Генетическая история') + $t('не может быть больше 500 символов'),
                 required: $t('Семья/Генетическая история') + ' ' + $t('обязательно')
               }" />
           </div>

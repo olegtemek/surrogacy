@@ -50,4 +50,12 @@ interface IProduct {
   meet_child_in_future_en?: string;
   genetic_history: string;
   genetic_history_en?: string;
+  resus: string
+  resus_en?: string
+  blood_type: string
+  blood_type_en?: string
+  childrens: string
+  childrens_en?: string
+  education: string
+  education_en?: string
 }

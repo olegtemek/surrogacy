@@ -66,6 +66,7 @@
   "Я подтверждаю, что информация в этом приложении является точной и достоверной.": "I certify that the information in this application is accurate and true.",
   "Select Country": "Select Country",
   "не может быть больше 120 символов": "cannot be more than 120 characters.",
+  "не может быть больше 500 символов": "cannot be more than 500 characters.",
   "обязательно": " is required",
   "У вас недостаточно доступа": "You don't have permission",
   "ФИО": "Full Name",
@@ -110,5 +111,10 @@
   "condition5_rec": "Recipients should be of a healthy weight and within a normal BMI. Being overweight can increase risks to pregnancy and the health of both the donor and the expectant mother.",
   "condition6_rec": "You should stick to healthy sexual relationships, be responsible to yourself and your baby.",
   "Характер": "Nature",
-  "Условия чтобы стать реципиентом": "Conditions for becoming a recipient"
+  "Условия чтобы стать реципиентом": "Conditions for becoming a recipient",
+  "Год рождения": "Year of birth",
+  "Резус фактор": "Rhesus factor",
+  "Группа крови": "Blood type",
+  "Кол-во детей": "Number of children",
+  "Образование": "Education"
 }

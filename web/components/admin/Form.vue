@@ -48,10 +48,10 @@
       }
         " />
     <FormKit type="text" name="age" validation="required|number" label="Возраст" number :value="product.age"
-      :placeholder="$t('Возраст')" :validation-messages="{
-        length: $t('Возраст') + $t('не может быть больше 120 символов'),
-        required: $t('Возраст') + ' ' + $t('обязательно'),
-        number: $t('Возраст') + ' ' + $t('должен быть цифрой.')
+      :placeholder="$t('Год рождения')" :validation-messages="{
+        length: $t('Год рождения') + $t('не может быть больше 120 символов'),
+        required: $t('Год рождения') + ' ' + $t('обязательно'),
+        number: $t('Год рождения') + ' ' + $t('должен быть цифрой.')
       }
         " />
 
@@ -154,6 +154,56 @@
         required: $t('Профессия') + ' ' + $t('обязательно')
       }
         " />
+
+    <FormKit type="text" name="resus" validation="required|length:0,120" label="Резус фактор" :value="product.resus"
+      :validation-messages="{
+        length: $t('Резус фактор') + $t('не может быть больше 120 символов'),
+        required: $t('Резус фактор') + ' ' + $t('обязательно')
+      }
+        " />
+    <FormKit type="text" name="resus_en" validation="length:0,120" label="Резус фактор на английском"
+      :value="product.resus_en" :validation-messages="{
+        length: $t('Резус фактор') + $t('не может быть больше 120 символов'),
+        required: $t('Резус фактор') + ' ' + $t('обязательно')
+      }
+        " />
+    <FormKit type="text" name="education" validation="required|length:0,120" label="Образование"
+      :value="product.education" :validation-messages="{
+        length: $t('Образование') + $t('не может быть больше 120 символов'),
+        required: $t('Образование') + ' ' + $t('обязательно')
+      }
+        " />
+    <FormKit type="text" name="education_en" validation="length:0,120" label="Образование на английском"
+      :value="product.education_en" :validation-messages="{
+        length: $t('Образование') + $t('не может быть больше 120 символов'),
+        required: $t('Образование') + ' ' + $t('обязательно')
+      }
+        " />
+
+    <FormKit type="text" name="blood_type" validation="required|length:0,120" label="Группа крови"
+      :value="product.blood_type" :validation-messages="{
+        length: $t('Группа крови') + $t('не может быть больше 120 символов'),
+        required: $t('Группа крови') + ' ' + $t('обязательно')
+      }
+        " />
+    <FormKit type="text" name="blood_type_en" validation="length:0,120" label="Группа крови на английском"
+      :value="product.blood_type_en" :validation-messages="{
+        length: $t('Группа крови') + $t('не может быть больше 120 символов'),
+        required: $t('Группа крови') + ' ' + $t('обязательно')
+      }
+        " />
+    <FormKit type="text" name="childrens" validation="required|length:0,120" label="Кол-во детей"
+      :value="product.childrens" :validation-messages="{
+        length: $t('Кол-во детей') + $t('не может быть больше 120 символов'),
+        required: $t('Кол-во детей') + ' ' + $t('обязательно')
+      }
+        " />
+    <FormKit type="text" name="childrens_en" validation="length:0,120" label="Кол-во детей на английском"
+      :value="product.childrens_en" :validation-messages="{
+        length: $t('Кол-во детей') + $t('не может быть больше 120 символов'),
+        required: $t('Кол-во детей') + ' ' + $t('обязательно')
+      }
+        " />
     <FormKit type="text" name="religion" validation="required|length:0,120" label="Религия" :value="product.religion"
       :validation-messages="{
         length: $t('Религия') + $t('не может быть больше 120 символов'),
@@ -241,45 +291,43 @@
         " />
   </div>
   <div class="formkit-wrapper-flex row">
-    <FormKit type="textarea" name="reproductive_history" validation="required|length:0,120"
+    <FormKit type="textarea" name="reproductive_history" validation="required|length:0,500"
       :value="product.reproductive_history" label="Репродуктивная история" :validation-messages="{
-        length: $t('Репродуктивная история') + $t('не может быть больше 120 символов'),
+        length: $t('Репродуктивная история') + $t('не может быть больше 500 символов'),
         required: $t('Репродуктивная история') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="reproductive_history_en" validation="length:0,120"
+    <FormKit type="textarea" name="reproductive_history_en" validation="length:0,500"
       :value="product.reproductive_history_en" label="Репродуктивная история на английском" :validation-messages="{
-        length: $t('Репродуктивная история') + $t('не может быть больше 120 символов'),
+        length: $t('Репродуктивная история') + $t('не может быть больше 500 символов'),
         required: $t('Репродуктивная история') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="additional_info" validation="required|length:0,120" :value="product.additional_info"
+    <FormKit type="textarea" name="additional_info" validation="required|length:0,500" :value="product.additional_info"
       label="Дополнительная информация" :validation-messages="{
-        length: $t('Дополнительная информация') + $t('не может быть больше 120 символов'),
+        length: $t('Дополнительная информация') + $t('не может быть больше 500 символов'),
         required: $t('Дополнительная информация') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="additional_info_en" validation="length:0,120" :value="product.additional_info_en"
+    <FormKit type="textarea" name="additional_info_en" validation="length:0,500" :value="product.additional_info_en"
       label="Дополнительная информация на английском" :validation-messages="{
-        length: $t('Дополнительная информация') + $t('не может быть больше 120 символов'),
+        length: $t('Дополнительная информация') + $t('не может быть больше 500 символов'),
         required: $t('Дополнительная информация') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="genetic_history" validation="required|length:0,120" :value="product.genetic_history"
+    <FormKit type="textarea" name="genetic_history" validation="required|length:0,500" :value="product.genetic_history"
       label="Семья/Генетическая история" :help="$t('Пожалуйста, опишите как можно подробнее')" :validation-messages="{
-        length: $t('Семья/Генетическая история') + $t('не может быть больше 120 символов'),
+        length: $t('Семья/Генетическая история') + $t('не может быть больше 500 символов'),
         required: $t('Семья/Генетическая история') + ' ' + $t('обязательно')
       }
         " />
-    <FormKit type="textarea" name="genetic_history_en" validation="length:0,120" :value="product.genetic_history_en"
+    <FormKit type="textarea" name="genetic_history_en" validation="length:0,500" :value="product.genetic_history_en"
       label="Семья/Генетическая история на английском" :help="$t('Пожалуйста, опишите как можно подробнее')"
       :validation-messages="{
-        length: $t('Семья/Генетическая история') + $t('не может быть больше 120 символов'),
+        length: $t('Семья/Генетическая история') + $t('не может быть больше 500 символов'),
         required: $t('Семья/Генетическая история') + ' ' + $t('обязательно')
       }
         " />
-
-
   </div>
 </template>
 
