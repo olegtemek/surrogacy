@@ -17,10 +17,10 @@
           </div>
         </div>
 
-        <div class="filter-input">
+        <!-- <div class="filter-input">
           <input type="text" v-model.trim="activeFilters.age" :placeholder="$t('Возраст')" @input="filteredProducts"
             :maxlength="10">
-        </div>
+        </div> -->
 
         <div class="filter-input">
           <input type="text" v-model.trim="activeFilters.id" placeholder="ID" @input="filteredProducts" maxlength="10">
