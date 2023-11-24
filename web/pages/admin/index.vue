@@ -40,6 +40,7 @@
 
             <div class="profile__list-item-block">
               <button class="accept" @click="changeStatus(product.id)" v-if="!product.status">Разрешить</button>
+              <button class="accept" @click="changeStatus(product.id)" v-else>Отключить</button>
               <button class="remove" @click="removeForm(product.id)">Удалить</button>
               <NuxtLink :to="`/admin/${product.id}`" class="more">Редактировать</NuxtLink>
             </div>
