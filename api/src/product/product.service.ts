@@ -101,6 +101,7 @@ export class ProductService {
       blood_type: createProductDto.blood_type,
       childrens: createProductDto.childrens,
       education: createProductDto.education,
+      ganorar: createProductDto.ganorar,
     });
 
     await this.botService.send(
@@ -224,6 +225,7 @@ export class ProductService {
       childrens_en: updateProductDto.childrens_en,
       education: updateProductDto.education,
       education_en: updateProductDto.education_en,
+      ganorar: updateProductDto.ganorar,
     });
 
     return {

@@ -80,6 +80,7 @@ model Product {
   childrens_en              String? //кол-во детей на английскои
   education                 String? //образование
   education_en              String? //образование на английском
+  ganorar                   String?  @default("1") // Ганорар
 }
 
 model Order {

@@ -227,4 +227,8 @@ export class CreateProductDto {
   @IsString()
   @IsOptional()
   education_en: string;
+
+  @IsString()
+  @IsOptional()
+  ganorar: string;
 }
