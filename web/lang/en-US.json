@@ -91,8 +91,8 @@
   "Генетические заболевания в семье": "Genetic Diseases in the Family",
   "Изображения": "Images",
   "Репродуктивная история": "Reproductive History",
-  "Дополнительная информация": "Additional Information",
-  "Семья/Генетическая история": "Family/Genetic History",
+  "Дополнительная информация": "About me",
+  "Семья/Генетическая история": "Family information",
   "Пожалуйста, опишите как можно подробнее": "Please provide as much detail as possible",
   "Далее": "Next",
   "должен быть в 16 символов": "must be 16 characters",
@@ -116,5 +116,6 @@
   "Резус фактор": "Rhesus factor",
   "Группа крови": "Blood type",
   "Кол-во детей": "Number of children",
-  "Образование": "Education"
+  "Образование": "Education",
+  "Гонорар": "Fee"
 }

@@ -17,11 +17,6 @@
           </div>
         </div>
 
-        <!-- <div class="filter-input">
-          <input type="text" v-model.trim="activeFilters.age" :placeholder="$t('Возраст')" @input="filteredProducts"
-            :maxlength="10">
-        </div> -->
-
         <div class="filter-input">
           <input type="text" v-model.trim="activeFilters.id" placeholder="ID" @input="filteredProducts" maxlength="10">
         </div>
@@ -42,12 +37,12 @@
                 <span>{{ $t('Рост') }}: {{ product.height }} см</span>
                 <span>{{ $t('Вес') }}: {{ product.weight }} кг</span>
                 <span>{{ $t('Цвет глаз') }}: {{ product.eye_color ?? $t('Неизвестно') }}</span>
-                <span>{{ $t('Цвет волос') }}: {{ product.hair_color ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Гонорар') }}: {{ product.ganorar ?? $t('Неизвестно') }}</span>
               </div>
 
               <div class="profile__list-item-block">
                 <span>{{ $t('Вредные привычки') }}: {{ product.habits ?? $t('Неизвестно') }}</span>
-                <span>{{ $t('Страна') }}: {{ product.country ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Город') }}: {{ product.city ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Аллергии') }}: {{ product.allergies ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Заболевания') }}: {{ product.chronic_diseases ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Профессия') }}: {{ product.profession ?? $t('Неизвестно') }}</span>
@@ -73,12 +68,12 @@
                 <span>{{ $t('Рост') }}: {{ product.height }} cm</span>
                 <span>{{ $t('Вес') }}: {{ product.weight }} kg</span>
                 <span>{{ $t('Цвет глаз') }}: {{ product.eye_color_en ?? $t('Неизвестно') }}</span>
-                <span>{{ $t('Цвет волос') }}: {{ product.hair_color_en ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Гонорар') }}: {{ product.ganorar ?? $t('Неизвестно') }}</span>
               </div>
 
               <div class="profile__list-item-block">
                 <span>{{ $t('Вредные привычки') }}: {{ product.habits_en ?? $t('Неизвестно') }}</span>
-                <span>{{ $t('Страна') }}: {{ product.country_en ?? $t('Неизвестно') }}</span>
+                <span>{{ $t('Город') }}: {{ product.city_en ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Аллергии') }}: {{ product.allergies_en ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Заболевания') }}: {{ product.chronic_diseases_en ?? $t('Неизвестно') }}</span>
                 <span>{{ $t('Профессия') }}: {{ product.profession_en ?? $t('Неизвестно') }}</span>

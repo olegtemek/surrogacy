@@ -125,6 +125,11 @@
                 length: $t('Группа крови') + $t('не может быть больше 120 символов'),
                 required: $t('Группа крови') + ' ' + $t('обязательно')
               }" />
+            <FormKit type="text" name="ganorar" validation="required|length:0,120" :label="$t('Гонорар')"
+              :placeholder="$t('Гонорар')" :validation-messages="{
+                length: $t('Гонорар') + $t('не может быть больше 120 символов'),
+                required: $t('Гонорар') + ' ' + $t('обязательно')
+              }" />
             <FormKit type="text" name="education" validation="required|length:0,120" :label="$t('Образование')"
               :placeholder="$t('Образование')" :validation-messages="{
                 length: $t('Образование') + $t('не может быть больше 120 символов'),

@@ -58,4 +58,5 @@ interface IProduct {
   childrens_en?: string
   education: string
   education_en?: string
+  ganorar?: string
 }
